@@ -1,6 +1,3 @@
-
- //create a form where user can choose toppings
-
  //Business Logic for Pizza Parlor
  function PizzaParlor(){
    this.pizzas = {}
@@ -33,7 +30,17 @@
  Pizza.prototype.pizzaOrder = function () {
   return this.toppings + "" + this.size;
  }
- let pizzaParlor = new PizzaParlor();
- let pizza1 = new Pizza("cheese", "small");
- let pizza2 = new Pizza("pepperoni", "big");
+ // User Interface Logic 
+ let pizzaOrder = new PizzaParlor();
 
+ $(document).ready (function() {
+  $("form#pizzaSelector").submit(function(event) {
+    event.preventDefault();
+    const topping = $("input:radio[name=topping]:checked").val();
+    const size = $("input:radio[name=size]:checked").val();
+    let newOrder = new Pizza(topping, size);
+    PizzaParlor.addPizza (newOrder);
+    console.log(pizzaParlor.pizza);
+  
+  });
+ });
