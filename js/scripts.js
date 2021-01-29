@@ -26,6 +26,7 @@
    this.toppings = toppings;
    this.size = size;
  }
+ 
 
  Pizza.prototype.pizzaOrder = function () {
   return this.toppings + "" + this.size;
@@ -39,8 +40,7 @@
     const topping = $("input:radio[name=topping]:checked").val();
     const size = $("input:radio[name=size]:checked").val();
     let newOrder = new Pizza(topping, size);
-    PizzaParlor.addOrder(newOrder);
-    console.log(pizzaParlor.pizza);
-  
+    pizzaOrder.addOrder(newOrder);
+    console.log(pizzaOrder.pizza);
   });
  });

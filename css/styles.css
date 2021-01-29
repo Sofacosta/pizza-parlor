@@ -3,3 +3,24 @@
   text-align: center;
   margin-top: 20px;
 }
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+#pizzaSelector {
+  text-align: center;
+  margin-top: 40px;
+  background-color: yellow;
+
+  
+}
+
+p {
+  font-weight: bold;
+  
+}
