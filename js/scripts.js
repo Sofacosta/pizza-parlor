@@ -39,7 +39,7 @@
     const topping = $("input:radio[name=topping]:checked").val();
     const size = $("input:radio[name=size]:checked").val();
     let newOrder = new Pizza(topping, size);
-    PizzaParlor.addPizza (newOrder);
+    PizzaParlor.addOrder(newOrder);
     console.log(pizzaParlor.pizza);
   
   });

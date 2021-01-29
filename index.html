@@ -16,37 +16,37 @@
 <p>Please select your favorite toppings:</p>
 <div>
   <label>
-    <input type="radio" name="topping" value="pepperoni"/> Pepperoni
+    <input type="checkbox" name="topping" value="pepperoni"/> Pepperoni
   </label>
 </div>
 <div>
 <label>
-  <input type="radio" name="topping" value="blackOlives"/> Black Olives
+  <input type="checkbox" name="topping" value="blackOlives"/> Black Olives
 </label>
 </div>
 <div>
 <label>
-  <input type="radio" name="topping" value="mushrooms"/> Mushrooms
+  <input type="checkbox" name="topping" value="mushrooms"/> Mushrooms
 </label>
 </div>
 <div>
   <label>
-  <input type="radio" name="topping" value="sausage"/> Sausage 
+  <input type="checkbox" name="topping" value="sausage"/> Sausage 
   </label>
   </div>
 <div>
   <label>
-  <input type="radio" name="topping" value="onions"/> Onions 
+  <input type="checkbox" name="topping" value="onions"/> Onions 
   </label>
   </div>
 <div>
    <label>
-  <input type="radio" name="topping" value="extraCheese"/> Extra cheese 
+  <input type="checkbox" name="topping" value="extraCheese"/> Extra cheese 
   </label>
   </div>
   <div>
   <label>
-  <input type="radio" name="topping" value="greenPeppers"/> Green Peppers 
+  <input type="checkbox" name="topping" value="greenPeppers"/> Green Peppers 
   </label>
   </div>
 </div>
@@ -69,7 +69,13 @@
    </div> 
 </div>
 </div>
+  <button type="submit" class="btn">Submit</button>
 </form>
+
+<div id="show-pizza">
+  <p>You have ordered: <span class="topping"></span></p>
+  <p>The size of your pizza will be:<span class="size"></span></p>
+</div>
 
 </body>
 </html>
