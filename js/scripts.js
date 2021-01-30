@@ -1,5 +1,5 @@
  //Business Logic for Pizza Parlor
- function PizzaParlor(){
+ function PizzaParlor() {
    this.pizzas = {}
    this.currentId = 0;
  }
@@ -27,22 +27,33 @@
    this.size = size;
  }
 
- Pizza.prototype.pizzaOrder = function () {
+ Pizza.prototype.pizzaOrder = function() {
   return this.toppings + "" + this.size;
  }
+
  // User Interface Logic 
  let pizzaOrder = new PizzaParlor();
 
- $(document).ready (function() {
-  $("form#pizzaSelector").submit(function(event) {
+
+ $(document).ready(function() {
+  $("#pizzaSelector").submit(function(event) {
     event.preventDefault();
     const toppings = $("input:checkbox[name=topping]:checked").map(function() {
       return $(this).val();
     }).get();
     const size = $("input:radio[name=size]:checked").val();
+    let total = 0;
     let newOrder = new Pizza(toppings, size);
     pizzaOrder.addOrder(newOrder);
-    console.log(toppings);
+    console.log(toppings)
     console.log(pizzaOrder.pizzas);
+  
+ 
+    $('input:checked').each(function() {
+      total = total + parseInt($(this).data('price'));
+    });
+    
+    $(".total").html(total);
+    $("#show-pizza").show();
   });
- });
+});

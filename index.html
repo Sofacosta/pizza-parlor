@@ -16,37 +16,37 @@
 <p>Please select your favorite toppings:</p>
 <div>
   <label>
-    <input type="checkbox" name="topping" value="pepperoni"/> Pepperoni
+    <input type="checkbox" name="topping" value="pepperoni" data-price=1 /> Pepperoni
   </label>
 </div>
 <div>
 <label>
-  <input type="checkbox" name="topping" value="blackOlives"/> Black Olives
+  <input type="checkbox" name="topping" value="blackOlives" data-price=1 /> Black Olives
 </label>
 </div>
 <div>
 <label>
-  <input type="checkbox" name="topping" value="mushrooms"/> Mushrooms
+  <input type="checkbox" name="topping" value="mushrooms" data-price=1 /> Mushrooms
 </label>
 </div>
 <div>
   <label>
-  <input type="checkbox" name="topping" value="sausage"/> Sausage 
+  <input type="checkbox" name="topping" value="sausage" data-price=1 /> Sausage 
   </label>
   </div>
 <div>
   <label>
-  <input type="checkbox" name="topping" value="onions"/> Onions 
+  <input type="checkbox" name="topping" value="onions" data-price=1 /> Onions 
   </label>
   </div>
 <div>
    <label>
-  <input type="checkbox" name="topping" value="extraCheese"/> Extra cheese 
+  <input type="checkbox" name="topping" value="extraCheese" data-price=1 /> Extra cheese 
   </label>
   </div>
   <div>
   <label>
-  <input type="checkbox" name="topping" value="greenPeppers"/> Green Peppers 
+  <input type="checkbox" name="topping" value="greenPeppers" data-price=1 /> Green Peppers 
   </label>
   </div>
 </div>
@@ -54,17 +54,17 @@
 <div class="size">
   <p>Please select a size:</p>
   <label>
-    <input type="radio" name="size" value="small"/> Small - 6 slices  
+    <input required type="radio" name="size" value="small" data-price=10 /> Small - 6 slices  
     </label>
   </div>
   <div>
     <label>
-   <input type="radio" name="size" value="medium"/> Medium - 8 slices
+   <input required type="radio" name="size" value="medium" data-price=12 /> Medium - 8 slices
    </label>
    </div>
    <div>
     <label>
-   <input type="radio" name="size" value="large"/> Large - 10 slices
+   <input required type="radio" name="size" value="large" data-price=14 /> Large - 10 slices
    </label>
    </div> 
 </div>
@@ -73,8 +73,7 @@
 </form>
 
 <div id="show-pizza">
-  <p>You have ordered: <span class="topping"></span></p>
-  <p>The size of your pizza will be:<span class="size"></span></p>
+  <p>Your total will be: <span class="total"></span></p>
 </div>
 
 </body>
