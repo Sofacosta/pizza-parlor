@@ -21,7 +21,7 @@ Expect(toppings).toEqual("blackOlives, "sausage", "extraCheese");
 
 Describe: total() 
 Test: "add total price of pizza of selected items in form"
-Expect(total).toEqual("total price of pizza");
+Expect(myPizza.totalprice).toEqual("12");
 
 ```
  

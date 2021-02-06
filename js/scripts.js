@@ -1,59 +1,32 @@
- //Business Logic for Pizza Parlor
- function PizzaParlor() {
-   this.pizzas = {}
-   this.currentId = 0;
- }
-
- PizzaParlor.prototype.addOrder = function(pizza) {
-   pizza.id = this.assignId();
-   this.pizzas[pizza.id] = pizza;
- }
-
- PizzaParlor.prototype.assignId = function() {
-  this.currentId += 1;
-  return this.currentId;
- }
-
- PizzaParlor.prototype.findPizza = function(id) {
-   if (this.pizzas[id] != undefined) {
-     return this.pizzas [id];
-   }
-   return false;
- }
- 
  //Business Logic for Pizza
  function Pizza(toppings, size) {
    this.toppings = toppings;
    this.size = size;
+   this.price = 0
  }
 
- Pizza.prototype.pizzaOrder = function() {
-  return this.toppings + "" + this.size;
- }
-
+ Pizza.prototype.totalPrice = function(prices) {
+  let total = 0;
+  for (let i = 0; i < prices.length; i++) {
+    total = total + prices[i];
+  } 
+  this.price = total;
+}
  // User Interface Logic 
- let pizzaOrder = new PizzaParlor();
-
-
- $(document).ready(function() {
+$(document).ready(function() {
   $("#pizzaSelector").submit(function(event) {
     event.preventDefault();
-    const toppings = $("input:checkbox[name=topping]:checked").map(function() {
+    const prices = $("input[data-price]:checked").map(function() {
+      return $(this).data('price');
+    }).get();
+    const toppings = $("input[name='topping']:checked").map(function() {
       return $(this).val();
     }).get();
-    const size = $("input:radio[name=size]:checked").val();
-    let total = 0;
-    let newOrder = new Pizza(toppings, size);
-    pizzaOrder.addOrder(newOrder);
-    console.log(toppings)
-    console.log(pizzaOrder.pizzas);
-  
- 
-    $('input:checked').each(function() {
-      total = total + parseInt($(this).data('price'));
-    });
+    const size = $("input[name='size']:checked").val();
+    const newOrder = new Pizza(toppings, size);
     
-    $(".total").html(total);
-    $("#show-pizza").show();
+    newOrder.totalPrice(prices);
+
+    console.log(`the total price of your delicious pizza is: $${totalPrice}`)
   });
 });
