@@ -10,7 +10,7 @@
   for (let i = 0; i < prices.length; i++) {
     total = total + prices[i];
   } 
-  this.price = total;
+  return total;
 }
  // User Interface Logic 
 $(document).ready(function() {
@@ -24,9 +24,9 @@ $(document).ready(function() {
     }).get();
     const size = $("input[name='size']:checked").val();
     const newOrder = new Pizza(toppings, size);
-    
-    newOrder.totalPrice(prices);
+    const totalPrice = newOrder.totalPrice(prices);
 
     console.log(`the total price of your delicious pizza is: $${totalPrice}`)
+    console.log(prices)
   });
 });

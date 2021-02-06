@@ -7,21 +7,14 @@ This is my indepentent project to showcase the lesson learned last week: Object 
 ## Specs
  
 ```
-Describe: pizzaParlor
-Test: "create a prototype methood to add pizza to PizzaParlor"
-Expect(pizzaParlor;).toEqual(pizza:{...});
+Describe: Pizza
+Test: "create an object pizza with toppings,size and price properties and get value from form "
+Expect(Pizza).toEqual(this.toppings=toppings, this.size=size. this.price=o);
 
-Describe: pizza
-Test: "create an object pizza and access information"
-Expect(pizza).toEqual(toppings:"cheese", sieze:"small);
+Describe: prices() 
+Test: "should add total price of pizza of slected items in form"
+Expect(Pizza.prices).toEqual("12");
 
-Describe: toppings() 
-Test: "create an array of selected toppings in checkbox"
-Expect(toppings).toEqual("blackOlives, "sausage", "extraCheese");
-
-Describe: total() 
-Test: "add total price of pizza of selected items in form"
-Expect(myPizza.totalprice).toEqual("12");
 
 ```
  
