@@ -8,13 +8,20 @@ This is my indepentent project to showcase the lesson learned last week: Object 
  
 ```
 Describe: Pizza
-Test: "create an object pizza with toppings,size and price properties and get value from form "
+Test: "create an object pizza with toppings,size and price properties"
 Expect(Pizza).toEqual(this.toppings=toppings, this.size=size. this.price=o);
 
-Describe: prices() 
+Describe: toppings
+Test: "should gather information from user of toppings selected in form"
+Expect(Pizza.toppings).toEqual("blackOlives", "onions");
+
+Describe: size
+Test: "should gather information from user of toppings selected in form"
+Expect(Pizza.size).toEqual("small");
+
+Describe: prices 
 Test: "should add total price of pizza of slected items in form"
 Expect(Pizza.prices).toEqual("12");
-
 
 ```
  

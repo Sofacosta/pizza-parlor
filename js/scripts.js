@@ -27,6 +27,6 @@ $(document).ready(function() {
     const totalPrice = newOrder.totalPrice(prices);
 
     console.log(`the total price of your delicious pizza is: $${totalPrice}`)
-    console.log(prices)
+    console.log(size)
   });
 });
