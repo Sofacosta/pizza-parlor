@@ -1,6 +1,7 @@
 # Pizza Parlor
 #### Independent project #4 for Epicodus
 #### Project initiated: 01-29-2021
+#### Project updated: 02-062021
 #### By Sofia Acosta
 ## Project Description
 This is my indepentent project to showcase the lesson learned last week: Object oriented Javascript. This website is a pizza parlor where a user can choose one or more individual toppings(cheese, pepperoni,artichoke, anchovy,etc) and a size to see the total cost of pizza and then order! 
